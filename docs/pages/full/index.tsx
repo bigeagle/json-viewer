@@ -69,6 +69,13 @@ map.set({}, 'world')
 const set = new Set([1, 2, 3])
 
 const superLongString = '1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111'
+const shortMultiLineString = `Line 1
+Line 2
+Line 3`
+const multiLineString = `Lorem ipsum dolor sit amet,
+consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
 
 const example = {
   avatar,
@@ -101,6 +108,8 @@ const example = {
     [3, 4]
   ],
   superLongString,
+  shortMultiLineString,
+  multiLineString,
   function: aPlusB,
   constFunction: aPlusBConst,
   anonymousFunction: function (a: number, b: number) {

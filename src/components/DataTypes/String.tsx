@@ -16,13 +16,14 @@ export const stringType = defineEasyType<string>({
     const value = showRest
       ? props.value
       : props.value.slice(0, collapseStringsAfterLength)
-    const hasRest = props.value.length > collapseStringsAfterLength
+    const hasRest = (props.value.length > collapseStringsAfterLength) || props.value.includes('\n')
     return (
       <Box
         component='span'
         sx={{
           overflowWrap: 'anywhere',
-          cursor: hasRest ? 'pointer' : 'inherit'
+          cursor: hasRest ? 'pointer' : 'inherit',
+          whiteSpace: showRest ? 'pre-wrap' : 'normal'
         }}
         onClick={() => {
           if (window.getSelection()?.type === 'Range') {

@@ -11,6 +11,7 @@ export const DataBox: FC<DataBoxProps> = props => (
     {...props}
     sx={{
       display: 'inline-block',
+      verticalAlign: 'top',
       ...props.sx
     }}
   />
